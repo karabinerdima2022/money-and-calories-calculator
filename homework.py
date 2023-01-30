@@ -63,3 +63,15 @@ class CashCalculator(Calculator):
         else:
             return ('Денег нет, держись: твой долг -'
                     f' {abs(rounded_balance)} {units}')
+
+
+class CaloriesCalculator(Calculator):
+    def get_calories_remained(self):
+        remained_calories = self.limit - self.get_today_stats()
+
+        if remained_calories > 0:
+            return ('Сегодня можно съесть что-нибудь ещё,\n'
+                    'но с общей калорийностью не более'
+                    f' {remained_calories} кКал')
+        else:
+            return 'Хватит есть!'
