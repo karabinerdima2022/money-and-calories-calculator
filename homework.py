@@ -61,8 +61,8 @@ class CashCalculator(Calculator):
         elif balance == 0:
             return 'Денег нет, держись'
         else:
-            return ('Денег нет, держись: твой долг -'
-                    f' {abs(rounded_balance)} {units}')
+            return ('Денег нет, держись: твой долг - '
+                    f'{abs(rounded_balance)} {units}')
 
 
 class CaloriesCalculator(Calculator):
@@ -71,10 +71,10 @@ class CaloriesCalculator(Calculator):
 
         if remained_calories > 0:
             return ('Сегодня можно съесть что-нибудь ещё,\n'
-                    'но с общей калорийностью не более'
-                    f' {remained_calories} кКал')
-        else:
-            return 'Хватит есть!'
+                    'но с общей калорийностью не более '
+                    f'{remained_calories} кКал')
+
+        return 'Хватит есть!'
 
 
 def main():
